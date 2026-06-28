@@ -1,4 +1,5 @@
-@font-face{font-family:SiteSans;src:local(Tahoma)}
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+
 :root{
   --bg:#050505;
   --panel:#0c0c0b;
@@ -12,7 +13,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:SiteSans,Arial,sans-serif;line-height:1.8}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Vazirmatn',Tahoma,Arial,sans-serif;line-height:1.95;font-weight:400}
 body.en{direction:ltr}
 a{text-decoration:none;color:inherit}
 .header{
@@ -281,5 +282,74 @@ footer img{width:62px}
 @media(max-width:620px){
   .hero-content-up{
     transform: translateY(-26px);
+  }
+}
+
+
+/* Persian-only typography refresh */
+h1,h2,h3,.nav,.button,.bio-button,.back-link,.track h3,.member-bio-card h1{
+  font-family:'Changa','Vazirmatn',Tahoma,Arial,sans-serif;
+}
+h1{
+  font-weight:800;
+  letter-spacing:-.055em;
+}
+.section h2,.contact h2{
+  font-weight:800;
+  letter-spacing:-.035em;
+}
+.nav{
+  font-size:15px;
+  font-weight:600;
+}
+.lead,.about p:last-child,.member p,.member-bio-card p{
+  font-family:'Vazirmatn',Tahoma,Arial,sans-serif;
+}
+.member h3{
+  font-weight:800;
+}
+.member b{
+  font-family:'Vazirmatn',Tahoma,Arial,sans-serif;
+  font-weight:700;
+}
+.back-link{
+  background:rgba(0,0,0,.35);
+  color:var(--yellow);
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:9px 16px;
+  cursor:pointer;
+}
+
+
+/* header image no-face-cover update: sharp photo, faces kept away from text */
+.hero-bg{
+  background-position:center center;
+}
+
+.hero-overlay{
+  background:
+    linear-gradient(270deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.76) 31%,rgba(0,0,0,.18) 62%,rgba(0,0,0,.30) 100%),
+    linear-gradient(to top,#050505 0%,rgba(5,5,5,.22) 36%,transparent 72%) !important;
+}
+
+@media(max-width:900px){
+  .hero{
+    min-height:100vh;
+    align-items:end;
+    padding-bottom:42px;
+  }
+  .hero-bg{
+    background-size:contain;
+    background-position:center 78px;
+    background-repeat:no-repeat;
+    background-color:#050505;
+  }
+  .hero-overlay{
+    background:
+      linear-gradient(to top,#050505 0%,rgba(5,5,5,.98) 25%,rgba(5,5,5,.42) 50%,rgba(5,5,5,.08) 100%) !important;
+  }
+  .hero-content{
+    padding-top:0;
   }
 }

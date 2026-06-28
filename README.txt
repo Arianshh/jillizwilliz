@@ -1,1 +1,1 @@
-Static bilingual Jilliz Williz website. Open index.html in a browser or deploy the folder on any static host.
+Jilliz Williz website — Persian-only version. Open index.html in a browser or deploy the full folder on any static host.
